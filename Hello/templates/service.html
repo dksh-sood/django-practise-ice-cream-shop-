@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoop Heaven - About Us</title>
+  <style>
+    /* Reset & Base Fonts */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Sweet Sans', Arial, sans-serif;
+    }
+    body {
+      background-color: #fff5f8;
+      color: #4a4a4a;
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      background: linear-gradient(rgba(255,223,223,0.9), rgba(255,241,241,0.9)),
+                  url('ice-cream-bg.jpg') center/cover;
+      padding: 120px 20px;
+      text-align: center;
+    }
+    .hero-title {
+      font-size: 4rem;
+      color: #ff6b6b;
+      text-shadow: 2px 2px #ffffff;
+      margin-bottom: 30px;
+      font-family: 'Ice Cream', cursive;
+    }
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 0.5em;
+    }
+
+    /* CONTENT SECTION */
+    .content-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;  /* Center headings and paragraphs by default */
+    }
+    .section-title {
+      font-size: 2.5rem;
+      color: #ff6b6b;
+      margin-bottom: 30px;
+      position: relative;
+      text-align: center;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: #ffd166;
+    }
+
+    /* STORY CARD: Two-Column Layout */
+    .story-card {
+      background: white;
+      border-radius: 30px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(255,107,107,0.1);
+      margin-bottom: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .story-image {
+      border-radius: 20px;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    /* Override default centering for story narrative text */
+    .story-card .story-text {
+      text-align: left;
+    }
+
+    /* VALUES GRID */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+      text-align: center;
+    }
+    .value-card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+    .value-card:hover {
+      transform: translateY(-10px);
+    }
+    .value-icon {
+      width: 80px;
+      height: 80px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    /* TEAM SECTION */
+    .team-section {
+      background: #fff0f0;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .team-member {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+    }
+    .member-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 5px solid #ff6b6b;
+    }
+
+    /* FLAVOR BANNER */
+    .flavor-banner {
+      background: #ff6b6b;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .flavor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+    .flavor-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      text-align: center;
+      padding: 80px 20px;
+      background: #fff9f9;
+    }
+    .cta-button {
+      background: #ff6b6b;
+      color: white;
+      padding: 15px 40px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 30px;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+    }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 768px) {
+      .story-card {
+        grid-template-columns: 1fr;
+      }
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-title {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <h1 class="hero-title">Our Sweet Story</h1>
+    <p class="hero-subtitle">Crafting Happiness Since 1995</p>
+  </section>
+
+  <!-- CONTENT SECTION -->
+  <div class="content-section">
+    <div class="story-card">
+      <img src="founder.jpg" alt="Our Founder" class="story-image" />
+      <div class="story-text">
+        <h2 class="section-title">Sweet Beginnings</h2>
+        <p>
+          What started as a small family recipe book has blossomed into Scoop Heaven's
+          beloved ice cream empire. Founded by Grandma Lucy in her home kitchen, we've
+          stayed true to our roots while innovating with exciting new flavors. Every scoop
+          tells a story of tradition, passion, and pure joy.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Our Core Values</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <img src="https://plus.unsplash.com/premium_photo-1671406557396-e660eebac76a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Natural Ingredients" class="value-icon" />
+        <h3>100% Natural</h3>
+        <p>
+          We use only the freshest local ingredients, free from artificial additives.
+        </p>
+      </div>
+      <div class="value-card">
+        <img src="https://images.unsplash.com/photo-1591068450470-1e3b0077b6e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Happy Cows" class="value-icon" />
+        <h3>Ethical Sourcing</h3>
+        <p>
+          Our dairy comes from free-range cows raised on family farms.
+        </p>
+      </div>
+      <div class="value-card">
+        <img src="innovation-icon.svg" alt="Innovation" class="value-icon" />
+        <h3>Creative Flavors</h3>
+        <p>
+          Our chefs craft unique combinations that surprise and delight.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEAM SECTION -->
+  <section class="team-section">
+    <div class="content-section">
+      <h2 class="section-title">Meet Our Scoop Squad</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://unsplash.com/photos/a-close-up-of-a-planet-with-a-black-background-0H18vkgrs2Q" alt="Harsh Sood" class="member-photo" />
+          <h3>Harsh Sood</h3>
+          <p>Master Flavor Curator</p>
+        </div>
+        <div class="team-member">
+          <img src="team2.jpg" alt="Shashank Sharma" class="member-photo" />
+          <h3>Shashank Sharma</h3>
+          <p>Quality Control Expert</p>
+        </div>
+        <div class="team-member">
+          <img src="team3.jpg" alt="Daksh Sood" class="member-photo" />
+          <h3>Daksh Sood</h3>
+          <p>Customer Happiness Manager</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLAVOR BANNER SECTION -->
+  <section class="flavor-banner">
+    <h2 class="section-title" style="color: white;">Over 100 Flavors to Explore</h2>
+    <div class="flavor-grid">
+      <div class="flavor-card">
+        <h3>Classic Favorites</h3>
+        <p>Vanilla Dream • Chocolate Ecstasy • Strawberry Fields</p>
+      </div>
+      <div class="flavor-card">
+        <h3>Seasonal Specials</h3>
+        <p>Pumpkin Spice • Peppermint Wonder • Summer Berry</p>
+      </div>
+      <div class="flavor-card">
+        <h3>Crazy Combos</h3>
+        <p>Bacon Maple Madness • Lavender Honey • Matcha Magic</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL-TO-ACTION SECTION -->
+  <section class="cta-section">
+    <h2 class="section-title">Ready for Sweet Adventures?</h2>
+    <p>Join our ice cream journey and discover new flavors every month</p>
+    <a href="/flavors" class="cta-button">Explore Flavors</a>
+  </section>
+</body>
+</html>
+
+

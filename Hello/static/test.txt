@@ -1,0 +1,1 @@
+hello everyone this is my static file folder that was created by my self only ... and my beginning towards the django
